@@ -6,10 +6,12 @@ import com.example.demo.repositories.FoundationRepository;
 import com.example.demo.repositories.PayeeRepository;
 import com.example.demo.repositories.PurposeRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
 
+@Component
 public class Populator implements CommandLineRunner {
 
     @Resource
