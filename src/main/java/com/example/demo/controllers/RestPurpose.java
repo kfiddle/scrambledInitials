@@ -3,8 +3,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.models.FoundationItem;
 import com.example.demo.models.Purpose;
-import com.example.demo.repositories.FoundationItemRepository;
-import com.example.demo.repositories.PurposeRepository;
+import com.example.demo.repositories.*;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -24,6 +23,15 @@ public class RestPurpose {
 
     @Resource
     FoundationItemRepository foundationItemRepo;
+
+    @Resource
+    FoundationRepository foundationRepo;
+
+    @Resource
+    ReceiptRepository receiptRepo;
+
+    @Resource
+    TransactionRepository transactionRepo;
 
     @RequestMapping("/get-purposes")
     public Collection<Purpose> getAllPurposes() {
@@ -57,6 +65,17 @@ public class RestPurpose {
         }
         Collections.sort(itemsToReturn);
         return itemsToReturn;
+    }
+
+    @GetMapping("/scrub-all")
+    public void deleteEverythingForNow() {
+
+        receiptRepo.deleteAll();
+        transactionRepo.deleteAll();
+        foundationItemRepo.deleteAll();
+        foundationRepo.deleteAll();
+        purposeRepo.deleteAll();
+
     }
 
 }
