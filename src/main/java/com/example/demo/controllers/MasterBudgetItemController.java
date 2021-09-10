@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -41,13 +43,14 @@ public class MasterBudgetItemController {
     @RequestMapping("/{community}/{month}")
     public Collection<MasterBudgetItem> getAllMasterBudgetItemsByCommunityAndMonth(@PathVariable String community,
                                                                                    @PathVariable int month) {
-        Collection<MasterBudgetItem> masterBudgetItemsToReturn = new ArrayList<>();
+        List<MasterBudgetItem> masterBudgetItemsToReturn = new ArrayList<>();
 
         for (MasterBudgetItem masterBudgetItem : masterBudgetItemRepo.findByCommunity(community)) {
             if (masterBudgetItem.getDate().getMonthValue() == month) {
                 masterBudgetItemsToReturn.add(masterBudgetItem);
             }
         }
+        Collections.sort(masterBudgetItemsToReturn);
         return masterBudgetItemsToReturn;
     }
 

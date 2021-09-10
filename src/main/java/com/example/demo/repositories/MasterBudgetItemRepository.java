@@ -9,4 +9,6 @@ public interface MasterBudgetItemRepository extends CrudRepository<MasterBudgetI
 
     Collection<MasterBudgetItem> findByCommunity(String community);
 
+    Collection<MasterBudgetItem> findByOrderByDate();
+
 }

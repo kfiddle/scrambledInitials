@@ -48,7 +48,7 @@ public class Populator implements CommandLineRunner {
 //        Purpose mitzvah = new Purpose("Mitzvah Corps");
 //        Purpose athletic = new Purpose("Athletic Activities");
 //        Purpose taiChi = new Purpose("Tai Chi/Pilates/Gigong");
-//
+
 //        purposeRepo.save(exercise);
 //        purposeRepo.save(speakerSeries);
 //        purposeRepo.save(distanceLearning);
@@ -71,7 +71,7 @@ public class Populator implements CommandLineRunner {
 //        purposeRepo.save(mitzvah);
 //        purposeRepo.save(athletic);
 //        purposeRepo.save(taiChi);
-//
+
 //        Foundation mAndm = new Foundation("Marilyn & Marshall Bedol youth Special Needs", 42521, specialNeeds);
 //        Foundation rayeMorris = new Foundation("Raye & Morris Blane Activities Fund", 29937, activities);
 //        Foundation albertBilstein = new Foundation("Albert Bilstein: Garden Fund for SG", 55778, garden);
@@ -98,8 +98,8 @@ public class Populator implements CommandLineRunner {
 //        Foundation estelle = new Foundation("Estelle & Allen Wolfe Fund", 14155, athletic);
 //        Foundation peter = new Foundation("Peter Meisel", 250000, outings);
 //        Foundation david = new Foundation("David and Helen Nagusky", 130000, taiChi);
-//
-//
+
+
 //        foundationRepo.save(mAndm);
 //        foundationRepo.save(rayeMorris);
 //        foundationRepo.save(albertBilstein);
